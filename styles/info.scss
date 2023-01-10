@@ -1,0 +1,174 @@
+.map-section {
+  @media screen and (min-width: 1080px) {
+    padding-top: 1%;
+  }
+  margin: 5%;
+  padding-top: 10%;
+
+  h1 {
+    margin: 0%;
+    font-size: 1.6rem;
+  }
+
+  img {
+    @media screen and (min-width: 1080px) {
+      width: 29%;
+      height: auto;
+    }
+    width: 99%;
+    margin-top: 3%;
+    height: auto;
+  }
+  h1 {
+    @media screen and (min-width: 1080px) {
+      margin: 0%;
+      font-size: 3.8rem;
+    }
+  }
+}
+
+.info-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3rem;
+  justify-content: center;
+  padding-top: 5%;
+  h1 {
+    margin: 0%;
+    font-size: 1.6rem;
+  }
+  h2 {
+    font-size: 1.6rem;
+  }
+  h1 {
+    @media screen and (min-width: 1080px) {
+      margin: 0%;
+      font-size: 3.8rem;
+    }
+  }
+  h2 {
+    @media screen and (min-width: 1080px) {
+      font-size: 2.25rem;
+      margin: 3% 0% 0% 0%;
+      padding: 0% 0% 0% 4%;
+    }
+    padding-left: 3%;
+    margin-bottom: 0%;
+  }
+  p {
+    @media screen and (min-width: 1080px) {
+      padding-top: 0%;
+      font-size: 1.1rem;
+      padding: 4%;
+      margin-top: 0%;
+    }
+    font-size: 0.9rem;
+    padding: 0% 3% 3% 3%;
+  }
+
+  article {
+    @media screen and (min-width: 1080px) {
+      max-width: 25%;
+    }
+    border: solid 6px var(--accent-teal);
+    border-radius: var(--basic-border-radius);
+    background-color: var(--main-color);
+
+    img {
+      width: 100%;
+      height: auto;
+      border-radius: 6px 6px 0px 0px;
+    }
+  }
+}
+
+.margin {
+  @media screen and (min-width: 1080px) {
+    padding-top: 1%;
+  }
+  margin: 5%;
+  padding-top: 10%;
+
+  h1 {
+    font-size: 1.6rem;
+    margin-left: 1%;
+  }
+  h1 {
+    @media screen and (min-width: 1080px) {
+      margin: 0%;
+      font-size: 3.8rem;
+    }
+  }
+}
+
+.info-section {
+  padding-top: 5%;
+  background: linear-gradient(
+    180deg,
+    rgba(33, 33, 33, 1) 0%,
+    rgba(33, 33, 33, 0.9) 30%,
+    rgba(33, 33, 33, 1) 100%
+  );
+
+  width: 100%;
+  h1 {
+    margin: 0;
+    font-size: 1.6rem;
+    margin-left: 5%;
+  }
+  .map {
+    @media screen and (min-width: 1080px) {
+    }
+    display: flex;
+    justify-content: center;
+  }
+
+  p {
+    @media screen and (min-width: 1080px) {
+      width: 50%;
+      margin-left: 5%;
+    }
+    padding-top: 4%;
+    padding-bottom: 2%;
+    margin-left: 5%;
+    margin-right: 5%;
+    font-size: 1rem;
+  }
+
+  .tester {
+    @media screen and (min-width: 1080px) {
+      display: flex;
+      gap: 5%;
+      flex-wrap: nowrap;
+    }
+    flex-wrap: wrap;
+    gap: 4%;
+    img {
+      @media screen and (min-width: 1080px) {
+        width: 30vw;
+        height: 30vw;
+        min-width: 250px;
+        min-height: 250px;
+      }
+      width: 30vw;
+      height: 30vw;
+      min-width: 250px;
+      min-height: 250px;
+    }
+  }
+
+  h1 {
+    @media screen and (min-width: 1080px) {
+      margin: 0%;
+      font-size: 3.8rem;
+      margin-left: 5%;
+    }
+  }
+
+  p {
+    @media screen and (min-width: 1080px) {
+      padding-top: 1%;
+      font-size: 1.1rem;
+    }
+  }
+}

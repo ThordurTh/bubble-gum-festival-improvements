@@ -1,0 +1,108 @@
+.ticket-section {
+  padding-top: 8rem;
+  height: 500px;
+  margin: auto 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  h2 {
+    margin-left: 1rem;
+  }
+  .ticket-cards {
+    margin-top: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    gap: 7rem;
+    align-items: center;
+    width: 100%;
+
+    @media screen and (min-width: 1080px) {
+      flex-direction: row;
+    }
+    .ticket-card-wrapper {
+      border: 6px solid var(--main-color);
+      border-radius: 20px;
+      width: 90%;
+      @media screen and (min-width: 1080px) {
+        width: auto;
+      }
+    }
+    .ticket-card {
+      display: flex;
+      flex-direction: row;
+      position: relative;
+      justify-content: space-around;
+      gap: 1rem;
+      @media screen and (min-width: 1080px) {
+        width: 400px;
+      }
+      .heading-price {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-bottom: 1rem;
+      }
+    }
+    ul {
+      margin-top: 3rem;
+      max-width: 170px;
+      li {
+        list-style: circle;
+      }
+    }
+    span {
+      font-size: 1.3rem;
+    }
+    .buy-now {
+      position: absolute;
+      bottom: -50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      @media screen and (min-width: 1080px) {
+        transform: translate(0, 0);
+        right: -30%;
+        bottom: -15%;
+      }
+      a {
+        text-transform: uppercase;
+        font-weight: bold;
+        background-color: var(--accent-hotpink);
+        border-radius: var(--basic-border-radius);
+        font-size: 1.3rem;
+        border: 6px solid var(--main-color);
+        width: 180px;
+        height: 50px;
+        text-align: center;
+        padding-top: 1px;
+        @media screen and (min-width: 1080px) {
+          width: 200px;
+          height: 60px;
+          padding-top: 0.3rem;
+        }
+      }
+    }
+    a:hover {
+      color: var(--accent-hotpink);
+      background-color: var(--main-color);
+      border-color: var(--accent-hotpink);
+      transition: 0.4s;
+    }
+  }
+}
+.ticket-cards {
+  .ticket-card-wrapper:nth-child(2) h3 {
+    background: linear-gradient(
+      180deg,
+      rgba(248, 44, 153, 0.9) 0%,
+      rgba(48, 213, 200, 0.9) 100%
+    );
+    background-clip: border-box;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}

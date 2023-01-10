@@ -1,0 +1,692 @@
+// GENERAL STYLING FOR THE TICKETS PAGE
+.green-border {
+  border: var(--basic-border);
+  border-radius: var(--basic-border-radius);
+  background-color: var(--main-color);
+}
+.step-bar-wrapper {
+  padding-top: 1rem;
+  display: flex;
+  justify-content: center;
+
+  .step-bar {
+    width: 100%;
+    height: auto;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    max-height: 75px;
+    max-width: 1600px;
+  }
+}
+
+.underline {
+  border-bottom: 6px solid var(--accent-lavender);
+  display: inline;
+  margin: 1rem;
+}
+
+// STEP 1/4 STYLING
+
+.step-1 {
+  width: 90vw;
+  margin: 0 auto;
+  .tickets-h2 {
+    @media screen and (max-width: 1080px) {
+      font-size: 3rem;
+    }
+  }
+  .tickets-h3 {
+    @media screen and (max-width: 1080px) {
+      font-size: 1.4rem;
+    }
+  }
+  .wrapper-step-1 {
+    margin: 3rem 0;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    @media screen and (min-width: 1080px) {
+      flex-direction: row;
+      align-items: initial;
+    }
+    .step-1-tickets {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+      width: 100%;
+      @media screen and (min-width: 1080px) {
+        align-items: initial;
+      }
+      .ticket-card {
+        max-width: 500px;
+        position: relative;
+        padding: 0.5rem;
+        .tickets-wrapper-boxes {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-around;
+          gap: 0.5rem;
+          .head-price {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            gap: 1rem;
+            margin-left: 0.5rem;
+            min-width: 110px;
+            h3 {
+              margin: 0;
+              padding: 0.5rem;
+            }
+            span {
+              text-align: center;
+              margin: auto 0 0.5rem;
+            }
+          }
+          .desc-buttons {
+            margin-left: 0.5rem;
+          }
+        }
+
+        .tickets-buttons-wrapper {
+          margin-right: 1.5rem;
+          display: flex;
+          justify-content: flex-end;
+          align-items: center;
+          gap: 0.8rem;
+          div {
+            background-color: var(--accent-hotpink);
+            border-radius: 10px;
+            font-size: 1.7rem;
+            color: var(--main-font);
+            width: 45px;
+            height: 45px;
+            text-align: center;
+          }
+          .tickets-ticket-buttons {
+            cursor: pointer;
+            border: none;
+            background-color: var(--tickets-button);
+            width: 45px;
+            height: 45px;
+            border-radius: 10px;
+            font-size: 2rem;
+            color: var(--main-font);
+          }
+          .tickets-ticket-buttons:active {
+            filter: brightness(120%);
+          }
+          .tickets-ticket-buttons:hover {
+            filter: brightness(120%);
+          }
+
+          .tickets-ticket-buttons:disabled {
+            filter: brightness(65%);
+          }
+        }
+      }
+    }
+  }
+  .summary {
+    min-width: 358px;
+  }
+}
+
+// STEP 2/4 STYLING
+
+.step-2 {
+  width: 90vw;
+  margin: 0 auto;
+  .tickets-h2 {
+    @media screen and (max-width: 1080px) {
+      font-size: 3rem;
+    }
+  }
+  .tickets-h3 {
+    @media screen and (max-width: 1080px) {
+      font-size: 1.4rem;
+    }
+  }
+  .wrapper-step-2 {
+    margin: 3rem 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    @media screen and (min-width: 1080px) {
+      flex-direction: row;
+    }
+    .camping-options-form {
+      padding: 1rem;
+      p {
+        font-size: 1.5rem;
+        margin-top: 0.3rem;
+      }
+      .camping-spot-radio {
+        div {
+          label {
+            min-width: 185px;
+          }
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+        }
+      }
+      .map {
+        width: 100%;
+        height: auto;
+        padding-top: 2rem;
+      }
+    }
+    .additional-options-wrapper {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+    .additional-camping-options {
+      padding: 1rem;
+
+      label {
+        display: flex;
+        justify-content: space-between;
+        .tooltip {
+          cursor: help;
+          position: relative;
+          display: inline-block;
+          border-bottom: 1px dotted var(--accent-hotpink);
+          .tooltiptext {
+            visibility: hidden;
+
+            background-color: var(--main-color);
+            border: 3px solid var(--accent-hotpink);
+            color: var(--font-color);
+            text-align: center;
+            border-radius: 6px;
+            padding: 5px 0;
+            position: absolute;
+            z-index: 1;
+            bottom: 150%;
+            left: 50%;
+            margin-left: -60px;
+            opacity: 0;
+            transition: opacity 1s;
+          }
+          .tooltiptext::after {
+            content: " ";
+            position: absolute;
+            top: 107%;
+            left: 50%;
+            margin-left: -5px;
+            border-width: 5px;
+            border-style: solid;
+            border-color: var(--accent-hotpink) transparent transparent
+              transparent;
+          }
+        }
+        .tooltip:hover .tooltiptext {
+          visibility: visible;
+          opacity: 1;
+        }
+        span:nth-child(2) {
+          margin: 0 auto 0 0.5rem;
+        }
+      }
+    }
+  }
+  .tents-wrapper {
+    padding: 1rem;
+    height: 100%;
+    .tent-service {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+
+      .tent-buttons {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        gap: 0.3rem;
+        div {
+          background-color: var(--accent-hotpink);
+          border-radius: 5px;
+          font-size: 1rem;
+          color: var(--main-font);
+          width: 25px;
+          height: 25px;
+          text-align: center;
+        }
+        button {
+          cursor: pointer;
+          border: none;
+          background-color: var(--tickets-button);
+          width: 25px;
+          height: 25px;
+          border-radius: 5px;
+          font-size: 1rem;
+          color: var(--main-font);
+        }
+        button:active {
+          filter: brightness(120%);
+        }
+        button:hover {
+          filter: brightness(120%);
+        }
+
+        button:disabled {
+          filter: brightness(65%);
+        }
+      }
+    }
+
+    .three-person-tent {
+      border-bottom: 1px solid var(--main-font);
+      margin-bottom: 2rem;
+      padding-bottom: 1rem;
+    }
+    .own-tent {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      padding-top: 0.5rem;
+    }
+  }
+  small {
+    filter: brightness(65%);
+  }
+}
+
+.step-3 {
+  .tickets-h2 {
+    @media screen and (max-width: 1080px) {
+      font-size: 3rem;
+    }
+  }
+  .tickets-h3 {
+    @media screen and (max-width: 1080px) {
+      font-size: 1.4rem;
+    }
+  }
+  width: 90vw;
+  margin: 0 auto;
+  .wrapper-step-3 {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin: 3rem 0;
+    @media screen and (min-width: 1400px) {
+      flex-direction: row;
+    }
+    .participant-form {
+      padding: 1rem;
+      @media screen and (min-width: 1080px) {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 5rem;
+        padding: 1rem 3rem 2rem;
+      }
+      .participant {
+        h3 {
+          margin-bottom: 1rem;
+          font-size: 1.8rem;
+        }
+      }
+
+      .user-box {
+        label {
+          position: relative;
+          left: 0;
+          top: -30px;
+          padding: 10px 0;
+          font-size: 16px;
+          color: #fff;
+          pointer-events: none;
+          transition: 0.5s;
+        }
+        input {
+          position: relative;
+          width: 100%;
+          padding: 10px 0;
+          font-size: 16px;
+          color: #fff;
+
+          border: none;
+          border-bottom: 1px solid #fff;
+          outline: none;
+          background: transparent;
+        }
+        input:focus ~ label,
+        input:valid ~ label {
+          top: -55px;
+          left: 0;
+          color: var(--accent-teal);
+          font-size: 12px;
+        }
+      }
+    }
+  }
+  .summary {
+    @media screen and (min-width: 1080px) {
+      max-width: 50%;
+    }
+  }
+}
+
+.step-4 {
+  width: 90vw;
+  margin: 0 auto;
+  position: relative;
+  .tickets-h2 {
+    @media screen and (max-width: 1080px) {
+      font-size: 3rem;
+    }
+  }
+  .tickets-h3 {
+    @media screen and (max-width: 1080px) {
+      font-size: 1.4em;
+    }
+  }
+  .wrapper-step-4 {
+    margin: 3rem 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    @media screen and (min-width: 1080px) {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
+    .input-wrapper {
+      padding: 2rem 1rem 1rem;
+      h5 {
+        text-transform: uppercase;
+        font-size: 1.2rem;
+        color: var(--accent-teal);
+        display: inline;
+      }
+      .personal-info .input-container:nth-child(2),
+      .payment-info .input-container:nth-child(2) {
+        margin-top: 2rem;
+      }
+      .personal-info {
+        margin-bottom: 2rem;
+      }
+      .input-container {
+        label {
+          position: relative;
+          left: 0;
+          top: -30px;
+          padding: 10px 0;
+          font-size: 16px;
+          color: #fff;
+          pointer-events: none;
+          transition: 0.5s;
+        }
+        input {
+          position: relative;
+          width: 100%;
+          padding: 10px 0 3px;
+          font-size: 16px;
+          color: #fff;
+
+          border: none;
+          border-bottom: 1px solid #fff;
+          outline: none;
+          background: transparent;
+        }
+        input:focus ~ label,
+        input:valid ~ label {
+          top: -55px;
+          left: 0;
+          color: var(--accent-teal);
+          font-size: 12px;
+        }
+        .error {
+          margin-top: -30px;
+          color: var(--accent-hotpink);
+        }
+      }
+      .seperator {
+        width: 100%;
+        height: 3px;
+        border-bottom: 3px dashed var(--accent-teal);
+        margin: 1rem 0 2rem;
+      }
+      button {
+        border-radius: var(--small-border-radius);
+        width: 8rem;
+        color: var(--font-color);
+        padding: 1rem;
+        border: none;
+        cursor: pointer;
+        text-transform: uppercase;
+        position: absolute;
+        bottom: -6rem;
+        right: 2px;
+        background-color: var(--accent-hotpink);
+      }
+      button:hover {
+        outline: 6px solid var(--accent-hotpink);
+        outline-offset: -6px;
+        background-color: var(--main-color);
+        color: var(--accent-hotpink);
+        transition: background-color 0.5s;
+      }
+    }
+    .summary {
+      @media screen and (min-width: 1080px) {
+        max-width: 50%;
+      }
+      .participants-details {
+        border: 3px dashed var(--accent-teal);
+        padding: 1rem;
+        border-radius: var(--basic-border-radius);
+        @media screen and (min-width: 810px) {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          div:nth-child(3) {
+            border-right: 3px dashed var(--accent-teal);
+          }
+        }
+        p {
+          font-size: 1.5rem;
+          color: var(--accent-teal);
+        }
+        div {
+          border-top: 3px dashed var(--accent-teal);
+          font-size: 0.9rem;
+          @media screen and (min-width: 810px) {
+          }
+          span {
+            font-weight: bold;
+            text-decoration: underline;
+          }
+        }
+        div:nth-child(1) {
+          border: none;
+          @media screen and (min-width: 810px) {
+            padding-right: 1rem;
+          }
+        }
+        div:nth-child(2) {
+          @media screen and (min-width: 810px) {
+            border: none;
+            border-left: 3px dashed var(--accent-teal);
+            padding: 0 1rem;
+          }
+        }
+        div:nth-child(3) {
+          @media screen and (min-width: 810px) {
+            padding-right: 1rem;
+          }
+        }
+        div:nth-child(4) {
+          @media screen and (min-width: 810px) {
+            padding: 0 1rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+.summary {
+  padding: 1rem;
+  width: 100%;
+  @media screen and (min-width: 1080px) {
+    max-width: 500px;
+  }
+  .items-container {
+    margin-top: 2rem;
+    .selections-camping-spot {
+      font-weight: bold;
+      color: var(--accent-teal);
+    }
+    li {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      span:nth-child(2) {
+        min-width: 1rem;
+        flex-grow: 2;
+        align-self: center;
+        border-bottom: 1px dashed white;
+        margin: 0 1rem;
+      }
+      span:nth-child(3) {
+        min-width: 60px;
+      }
+    }
+  }
+  small {
+    filter: brightness(65%);
+  }
+  .total-amount {
+    border-top: 1px solid var(--main-font);
+    padding-top: 1rem;
+  }
+  .disclaimer {
+    padding-top: 1rem;
+  }
+}
+
+.modal {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: 30;
+  top: 0;
+  left: 0;
+  display: none;
+  visibility: hidden;
+  pointer-events: none;
+  text-align: center;
+  .modal-content {
+    background-color: var(--main-color);
+    border: var(--basic-border);
+    border-radius: var(--basic-border-radius);
+    padding: 1rem;
+    h3 {
+      @media screen and (max-width: 1080px) {
+        font-size: 1.4rem;
+      }
+    }
+    ul {
+      font-size: 1.3rem;
+      @media screen and (max-width: 1080px) {
+        font-size: 1rem;
+      }
+    }
+    .back-front {
+      padding: 0 0 2rem 0;
+      display: flex;
+      justify-content: center;
+      margin-top: 3rem;
+      @media screen and (min-width: 1080px) {
+        margin: 0 1rem;
+        align-self: center;
+      }
+      a {
+        background-color: var(--accent-hotpink);
+        border-radius: 15px;
+        padding: 1rem 0;
+        text-align: center;
+        font-size: 1.3rem;
+        font-weight: bold;
+        text-transform: uppercase;
+        border: 6px solid #ffffff00;
+        width: 10rem;
+        @media screen and (max-width: 1080px) {
+          padding: 0;
+        }
+      }
+      a:hover {
+        color: var(--accent-hotpink);
+        background-color: var(--main-color);
+        border: 6px solid var(--accent-hotpink);
+        transition: 0.4s;
+      }
+    }
+  }
+}
+.modal-show {
+  padding: 1rem;
+  display: flex;
+  visibility: initial;
+  pointer-events: initial;
+}
+
+.behind {
+  z-index: 5;
+}
+
+.nextback-buttons {
+  display: flex;
+  justify-content: space-between;
+
+  width: 90vw;
+  margin: 0 auto 3rem;
+
+  button {
+    border-radius: var(--small-border-radius);
+    width: 8rem;
+    color: var(--font-color);
+    padding: 1rem;
+    border: none;
+    cursor: pointer;
+    text-transform: uppercase;
+  }
+  .next-button:hover {
+    outline: 6px solid var(--accent-hotpink);
+    outline-offset: -6px;
+    background-color: var(--main-color);
+    color: var(--accent-hotpink);
+    transition: background-color 0.5s;
+  }
+  .back-button:hover {
+    outline: 6px solid var(--tickets-button);
+    outline-offset: -6px;
+    background-color: var(--main-color);
+    transition: background-color 0.5s;
+  }
+  .first-next {
+    margin-left: auto;
+  }
+  .back-button {
+    background-color: var(--tickets-button);
+  }
+
+  .next-button {
+    background-color: var(--accent-hotpink);
+  }
+  .disabled {
+    background-color: var(--tickets-button);
+  }
+}
