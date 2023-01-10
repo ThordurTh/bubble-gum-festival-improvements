@@ -44,9 +44,9 @@ function LastStepForm({ responseID }) {
       year: Yup.string()
         .required("Year is Required")
         .matches(/(2)[2-9]|30/, "Year must be between 22-30"),
-      cww: Yup.string()
-        .required("CWW is Required")
-        .matches(/\d{4}$/, "CWW must only be only 4 digits"),
+      cvv: Yup.string()
+        .required("cvv is Required")
+        .matches(/\d{4}$/, "cvv must only be only 4 digits"),
     }),
 
     onSubmit: (values) => {
@@ -251,18 +251,18 @@ function LastStepForm({ responseID }) {
 
           <div className="input-container">
             <input
-              className="cww"
-              id="cww"
-              name="cww"
+              className="cvv"
+              id="cvv"
+              name="cvv"
               type="text"
               onChange={formik.handleChange}
               onBlur={formik.handleBlur}
               maxLength={4}
               required
             />
-            <label htmlFor="cww">CWW:</label>
-            {formik.touched.cww && formik.errors.cww ? (
-              <p className="error">{formik.errors.cww}</p>
+            <label htmlFor="cvv">cvv:</label>
+            {formik.touched.cvv && formik.errors.cvv ? (
+              <p className="error">{formik.errors.cvv}</p>
             ) : null}
           </div>
         </div>

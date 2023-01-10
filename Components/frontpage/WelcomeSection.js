@@ -1,5 +1,5 @@
 import { nanoid } from "nanoid";
-import Lineup from "../lineup/Lineup";
+import LineupLines from "../lineup/LineupLines";
 import headerImage from "../../assets/header-image2.png";
 import Image from "next/image";
 import BackgroundLines from "../BackgroundLines";
@@ -25,7 +25,7 @@ export default function WelcomeSection({ data }) {
       <h1>BUBBLE GUM FESTIVAL 2023</h1>
       <ul className="lineup">
         {data.slice(0, 14).map((item) => (
-          <Lineup key={nanoid()} name={item.name} />
+          <LineupLines key={nanoid()} name={item.name} />
         ))}
       </ul>
       <div className="book-now-front">
