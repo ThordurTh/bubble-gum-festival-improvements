@@ -10,8 +10,9 @@
   },
   "dependencies": {
     "eslint": "8.28.0",
-    "eslint-config-next": "13.0.6",
+    "eslint-config-next": "^0.2.4",
     "formik": "^2.2.9",
+    "framer-motion": "^8.4.0",
     "just-clone": "^6.1.1",
     "nanoid": "^4.0.0",
     "next": "13.0.6",

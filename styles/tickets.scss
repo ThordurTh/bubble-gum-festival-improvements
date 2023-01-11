@@ -691,3 +691,29 @@
     background-color: var(--tickets-button);
   }
 }
+
+// .test-step {
+//   transform: translateX(+100vw);
+//   opacity: 0;
+// }
+
+.step-animation {
+  @media screen and (min-width: 1080px) {
+    transform: translateX(0vw);
+    // opacity: 1;
+    // transition: all 2s ease-in;
+    animation-name: example;
+    animation-duration: 1s;
+  }
+}
+
+@keyframes example {
+  from {
+    transform: translateX(+30vw);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0vw);
+    opacity: 1;
+  }
+}

@@ -111,6 +111,7 @@
   );
 
   width: 100%;
+  min-height: 100vh;
   h1 {
     margin: 0;
     font-size: 1.6rem;
@@ -171,4 +172,27 @@
       font-size: 1.1rem;
     }
   }
+}
+
+.progress-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 10px;
+  background: red;
+  transform-origin: 0%;
+}
+
+.section-test {
+  box-sizing: border-box;
+  width: 100%;
+  // overflow: hidden;
+  // padding: 50px 50px 50px 50px;
+}
+
+.section-child {
+  display: block;
+  transform: translateX(-100px);
+  opacity: 0;
 }

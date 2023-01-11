@@ -90,7 +90,7 @@ function Tickets({ data }) {
     switch (step) {
       case 0:
         return (
-          <>
+          <div>
             <section className="step-1">
               <Heading></Heading>
 
@@ -180,15 +180,18 @@ function Tickets({ data }) {
                 />
               </section>
             </section>
-          </>
+          </div>
         );
       case 1:
         return (
-          <>
+          // <div
+          //   className={`test-step ${step === 1 ? " test-step-animation" : ""}`}
+          // >
+          <div>
             <section className="step-2">
               <Heading2 />
               <h3 className="underline tickets-h3">SELECT CAMPING OPTIONS</h3>
-              <section className="wrapper-step-2">
+              <section className="wrapper-step-2 step-animation">
                 {/* CAMPING SPOTS */}
                 <div className="camping-options-form green-border">
                   <p>Available Camping Spots</p>
@@ -339,7 +342,7 @@ function Tickets({ data }) {
                 />
               </section>
             </section>
-          </>
+          </div>
         );
       case 2:
         return (
@@ -347,7 +350,7 @@ function Tickets({ data }) {
             <section className="step-3">
               <Heading3 />
               <h3 className="underline tickets-h3">FILL IN PERSONAL INFO</h3>
-              <section className="wrapper-step-3">
+              <section className="wrapper-step-3 step-animation">
                 <form className="participant-form green-border">
                   {formElements}
                 </form>
@@ -372,7 +375,7 @@ function Tickets({ data }) {
             <section className="step-4">
               <Heading4 />
               <h3 className="underline tickets-h3">FILL IN CREDIT CARD INFO</h3>
-              <section className="wrapper-step-4">
+              <section className="wrapper-step-4 step-animation">
                 <LastStepForm responseID={reserveID} />
 
                 <Selections
