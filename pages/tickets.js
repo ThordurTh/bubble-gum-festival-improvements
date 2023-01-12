@@ -13,6 +13,7 @@ import Image from "next/image";
 import map from "../assets/map.webp";
 import TimerComp from "../Components/tickets/TimerComp";
 import Head from "next/head";
+import "animate.css";
 
 function Tickets({ data }) {
   const [numRegular, setNumRegular] = useState(0);
@@ -191,7 +192,7 @@ function Tickets({ data }) {
             <section className="step-2">
               <Heading2 />
               <h3 className="underline tickets-h3">SELECT CAMPING OPTIONS</h3>
-              <section className="wrapper-step-2 step-animation">
+              <section className="wrapper-step-2 ">
                 {/* CAMPING SPOTS */}
                 <div className="camping-options-form green-border">
                   <p>Available Camping Spots</p>
@@ -350,7 +351,7 @@ function Tickets({ data }) {
             <section className="step-3">
               <Heading3 />
               <h3 className="underline tickets-h3">FILL IN PERSONAL INFO</h3>
-              <section className="wrapper-step-3 step-animation">
+              <section className="wrapper-step-3 ">
                 <form className="participant-form green-border">
                   {formElements}
                 </form>
@@ -368,14 +369,13 @@ function Tickets({ data }) {
             </section>
           </>
         );
-
-      default:
+      case 3:
         return (
           <>
             <section className="step-4">
               <Heading4 />
               <h3 className="underline tickets-h3">FILL IN CREDIT CARD INFO</h3>
-              <section className="wrapper-step-4 step-animation">
+              <section className="wrapper-step-4 ">
                 <LastStepForm responseID={reserveID} />
 
                 <Selections
@@ -392,11 +392,17 @@ function Tickets({ data }) {
             </section>
           </>
         );
+      case 4:
+        console.log("woohoo");
     }
   };
   function handleNext() {
-    window.location.href = "#";
+    window.scrollTo(0, 0);
     setStep(step + 1);
+  }
+  function handleBack() {
+    window.scrollTo(0, 0);
+    setStep(step - 1);
   }
 
   return (
@@ -411,7 +417,7 @@ function Tickets({ data }) {
       {startTimer && <TimerComp seconds="360" />}
       <div className="nextback-buttons">
         {step > 0 && (
-          <button className="back-button" onClick={() => setStep(step - 1)}>
+          <button className="back-button" onClick={handleBack}>
             Back
           </button>
         )}

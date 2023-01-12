@@ -28,7 +28,7 @@ function Footer() {
       <nav className="socials">
         <ul>
           <li>
-            <Anchor href="">
+            <Anchor href="#">
               <Image
                 className="social-icon"
                 alt="facebook icon"
@@ -37,7 +37,7 @@ function Footer() {
             </Anchor>
           </li>
           <li>
-            <Anchor href="">
+            <Anchor href="#">
               <Image
                 className="social-icon"
                 alt="instagram icon"
@@ -46,7 +46,7 @@ function Footer() {
             </Anchor>
           </li>
           <li>
-            <Anchor href="">
+            <Anchor href="#">
               <Image
                 className="social-icon"
                 alt="twitter icon"
@@ -55,7 +55,7 @@ function Footer() {
             </Anchor>
           </li>
           <li>
-            <Anchor href="">
+            <Anchor href="#">
               <Image
                 className="social-icon"
                 alt="spotify icon"

@@ -83,9 +83,10 @@ function LastStepForm({ responseID }) {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: `{"id":${responseID}}`,
+        mode: "no-cors",
       };
 
-      fetch("https://touchgrassfestival.fly.dev/fullfill-reservation", options2)
+      fetch("http://localhost:8080/fullfill-reservation", options2)
         .then((response) => response.json())
         .then((response) => console.log(response))
         .catch((err) => console.error(err));
@@ -273,7 +274,7 @@ function LastStepForm({ responseID }) {
               <li>Your order number: {responseID} has been confirmed.</li>
               <li>Happy Partying!</li>
             </ul>
-            <div className="back-front">
+            <div className="back-front-tickets">
               <Anchor href="/">Home</Anchor>
             </div>
           </div>
