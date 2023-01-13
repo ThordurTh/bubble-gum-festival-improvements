@@ -3,7 +3,8 @@ import LineupLines from "../lineup/LineupLines";
 import headerImage from "../../assets/header-image2.png";
 import Image from "next/image";
 import BackgroundLines from "../BackgroundLines";
-import Countdown from "./Countdown";
+// import Countdown from "./Countdown";
+import dynamic from "next/dynamic";
 import Anchor from "../Anchor";
 
 // console.log(Date.parse("04 Jul 2023 00:12:00 GMT"));
@@ -13,6 +14,9 @@ import Anchor from "../Anchor";
 // console.log(diffTime);
 
 export default function WelcomeSection({ data }) {
+  const Countdown = dynamic(() => import("./Countdown"), {
+    ssr: false,
+  });
   return (
     <section className="welcome-section">
       <BackgroundLines />
@@ -33,10 +37,11 @@ export default function WelcomeSection({ data }) {
       </div>
       <section className="countdown-wrapper">
         {/* <Countdown seconds={Date.parse("04 Jul 2023 00:12:00 GMT") / 100000} /> */}
-        <Countdown seconds={12738907890 / 1000} />
-        {/* <Countdown
+        {/* <Countdown seconds={12738907890 / 1000} /> */}
+
+        <Countdown
           seconds={Math.abs(new Date("7/4/2023") - new Date()) / 1000}
-        /> */}
+        />
       </section>
     </section>
   );
