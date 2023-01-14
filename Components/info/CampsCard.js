@@ -5,7 +5,7 @@ function CampsCard(props) {
   return (
     <>
       <article>
-        <Image src={props.img} alt="img"></Image>
+        <Image src={props.img} alt={props.infotitle}></Image>
         <div>
           <h2>{props.infotitle}</h2>
           <p>{props.infotext}</p>
